@@ -69,4 +69,14 @@ it("should add new color", done => {
 	})
 });
 
+it("should return new color list Request", done => {
+	chai.request(app)
+	.get('/colors')
+	.end((err, res) => {
+		if (err) done(err)
+			expect(res).to.have.status(200);
+		done();
+	})
+});
+
 

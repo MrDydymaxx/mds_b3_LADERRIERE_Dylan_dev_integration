@@ -61,6 +61,7 @@ it("should add new color", done => {
 	.end((err, res) => {
 		if (err) done(err)
 			expect(res).to.have.status(201);
+			expect(res).to.be.json;
 		done();
 	})
 });

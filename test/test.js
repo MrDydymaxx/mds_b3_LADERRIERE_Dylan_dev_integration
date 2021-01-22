@@ -38,6 +38,7 @@ it("should return all colors", done => {
 			expect(res).to.be.json;
 			expect(res.body).to.be.an('object');
 			expect(res.body.results).to.be.an('array');
+			expect(res).not.to.be.undefined;
 		done();
 	})
 });

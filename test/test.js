@@ -53,4 +53,16 @@ it("should return Bad Request", done => {
 	})
 });
 
+it("should add new color", done => {
+	chai.request(app)
+	.post('/colors')
+	.set('content-type','application/json')
+	.send({color:"Royal Blue"})
+	.end((err, res) => {
+		if (err) done(err)
+			expect(res).to.have.status(201);
+		done();
+	})
+});
+
 

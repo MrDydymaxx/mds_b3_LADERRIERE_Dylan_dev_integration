@@ -36,6 +36,7 @@ it("should return all colors", done => {
 		if (err) done(err)
 			expect(res).to.have.status(200);
 			expect(res).to.be.json;
+			expect(res.body).to.be.an('object');
 		done();
 	})
 });
